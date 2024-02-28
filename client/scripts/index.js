@@ -52,7 +52,7 @@ class Movie {
         domGenre.innerHTML = `<b>Género: </b> ${genre.join(' - ')}`
 
         const domRate = document.createElement("p");
-        domRate.innerHTML = `<b>Calificación: </b> ${rate}`
+        domRate.innerHTML = `<b>Calificación: </b> ${rate}⭐`
 
         // CONTENEDOR DE LOS DATOS -->
         const container = document.createElement('div')
