@@ -116,6 +116,7 @@ hr {
 .card img:hover {
   transform: scale(1.03);
   border: 5px solid white;
+  box-shadow: 0 8px 8px 0 rgba(20, 20, 20, 0.15);
 }
 
 .card p {
@@ -229,6 +230,16 @@ hr {
 
 /* Media query para dispositivos con ancho máximo de 768px   */
 @media only screen and (max-width: 768px) {
+
+  .hito {
+    width: 80%;
+    flex-direction: column;
+  }
+  
+  .hitoImg {
+    height: 200px;
+  }
+
   .randomQuote {
     font-size: 16px;
   }
