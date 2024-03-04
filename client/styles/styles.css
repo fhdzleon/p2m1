@@ -170,7 +170,6 @@ hr {
   margin-top: 12px;
   text-align: justify;
   font-family: Arial, Helvetica, sans-serif;
-  
 }
 
 .hitosCont {
@@ -230,12 +229,11 @@ hr {
 
 /* Media query para dispositivos con ancho máximo de 768px   */
 @media only screen and (max-width: 768px) {
-
   .hito {
-    width: 80%;
+    width: 100%;
     flex-direction: column;
   }
-  
+
   .hitoImg {
     height: 200px;
   }
