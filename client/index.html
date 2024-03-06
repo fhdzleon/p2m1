@@ -1,7 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -18,69 +40,134 @@
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
-   
-     <!--B O D Y-->
+
+  <!--B O D Y-->
 
   <body>
-    <h3 id="randomQuote" class="randomQuote"></h3>
-    <header class="header">
-      <!-- Logo -->
-      <img src="./assets/logo.ico" alt="logo" />
+    <div class="container">
+      <div
+        class="bg-light text-center fw-bolder font-monospace border-bottom border-primary"
+      >
+        <h3
+          id="randomQuote"
+          class="randomQuote fs-5"
+          style="color: darkgray"
+        ></h3>
+      </div>
 
-      <!-- Items de la nav bar-->
-      <ul>
-        <li class="navItem"><a href=""><a href="cinema.html">Cinematografía</a></a></li>
-        <li class="navItem"><a href="#recs">Recomendaciones</a></li>
-        <li class="navItem"><a href="#about">Acerca de mi</a></li>
-      </ul>
-    </header>
+      <header>
+        <!-- Items de la nav bar-->
+        <nav
+          class="navbar border-bottom border-primary pe-4"
+          style="background-color: #e3f2fd"
+        >
+          <div
+            class="container-fluid d-flex justify-content-between align-items-center"
+          >
+            <!-- Elementos en el extremo izquierdo -->
+            <div class="d-flex align-items-center">
+              <img src="./assets/logo.ico" alt="logo" width="180" />
+              <div class="titulo ms-3">
+                <h1 class="text-start mb-0">Skull Tech - Cinema</h1>
+                <p class="text-start mb-0">Datos técnicos del séptimo arte</p>
+              </div>
+            </div>
 
-    <!-- Main -->
-    <main>
-      <!-- titulo-->
-      <section class="title">
-        <h1>Skull Tech - Cinema</h1>
-        <p>Datos técnicos del séptimo arte</p>
-      </section>
+            <!-- Botón desplegable en el extremo derecho -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-      <!-- Recomendaciones -->
-      <h1 class="subtitle">Mi selección de peliculas:</h1>
+            <!-- Contenido colapsable de la barra de navegación -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navItems nav justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link" href="cinema.html" style="color: black"
+                    >Cinematografía</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#recs" style="color: black"
+                    >Recomendaciones</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about" style="color: black"
+                    >Acerca de mi</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!--FIN DE LA NAV-->
+      </header>
 
-      <section id="recs" class="cardContainer">
+      <!-- Main -->
+      <main>
+        <!-- titulo-->
+        <section class="title"></section>
 
-     
+        <!-- Recomendaciones -->
+        <h3 class="subtitle my-3">Mi selección de peliculas:</h3>
 
-      </section>
-    
-      <h1 class="subtitle">Acerca de mi:</h1>
+        <!-- ABUELO -->
+        <div class="abuelo container-fluid d-flex">
+          <div id="recs" class="containerPadre row"></div>
+        </div>
 
-      <!-- About me-->
-      <section id="about" class="about">
-        <div class="aboutContent" >
-
-            <img src="./assets/pumassopra.jpg" alt="Yo">
-            <div class="aboutText">
+        <!-- About me-->
+        <h3 class="subtitle my-3">Acerca de mí:</h3>
+        <!--Foto About-->
+        <section
+          id="about"
+          class="mb-3 p-4 border border-primary rounded container aboutSection"
+        >
+          <div class="aboutItems row">
+            <aside class="asideLeft col-12 col-sm-6">
+              <article>
+                <img src="/client/assets/pumassopra.jpg" alt="" />
+              </article>
+            </aside>
+            <aside class="asideRight col-12 col-sm-6">
+              <article>
                 <h3>Felipe Hernández Díaz de León</h3>
                 <span>SkullDev</span>
-                <hr>
-                <p>
-                    Aficionado del cine y estudiante de programación, interesado en
-                    explorar el mundo del séptimo arte desde una perspectiva técnica.
-                    Aunque mi formación principal está en el campo de la programación, mi
-                    gusto por el cine me ha llevado a conocer sus aspectos técnicos
+                <hr />
+                <p class="lead">
+                  Aficionado del cine y estudiante de programación, interesado
+                  en explorar el mundo del séptimo arte desde una perspectiva
+                  técnica. Aunque mi formación principal está en el campo de la
+                  programación, mi gusto por el cine me ha llevado a conocer sus
+                  aspectos técnicos
                 </p>
-                <hr>
-            </div>
-        </div>
-      </section>
+              </article>
+            </aside>
+          </div>
+        </section>
+      </main>
+      <!--FIN DEL MAIN-->
 
-      <footer class="footer">
-        <p>Desarrollado por SkullDev 2024</p>
+      <!--FOOTER-->
+
+      <footer
+        class="footer text-center fw-bolder font-monospace border-top border-primary"
+        style="background-color: #e3f2fd; height: 30px"
+      >
+        <p class="align-baseline text-end">Desarrollado por SkullDev 2024</p>
       </footer>
-    </main>
 
+      <!--FIN DEL FOOTER-->
+    </div>
     <script src="./scripts/quotes.js"></script>
-     
     <script src="./scripts/index.js"></script>
   </body>
 </html>

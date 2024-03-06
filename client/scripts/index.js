@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function buildMovie(data) {
   const { title, year, director, duration, genre, rate, poster } = data;
 
-  const domTitle = document.createElement("h2");
+  const domTitle = document.createElement("h5");
+  domTitle.className = "card-title bolder";
   domTitle.innerHTML = title;
 
   const domPoster = document.createElement("img");
@@ -40,12 +41,14 @@ function buildMovie(data) {
   domRate.innerHTML = `<b>Calificación: </b> ${rate}⭐`;
 
   // CONTENEDOR DE LOS DATOS -->
-  const container = document.createElement("div");
-  container.className = "card";
+
+  const containerNieto = document.createElement("div");
+  containerNieto.className =
+    "containerhijo cardContainer card p-3 border-primary ";
 
   // ARAMDO DE CARD -->
 
-  container.append(
+  containerNieto.append(
     domTitle,
     domPoster,
     domDirector,
@@ -55,7 +58,13 @@ function buildMovie(data) {
     domRate
   );
 
-  return container;
+  const containerHijo2 = document.createElement("div");
+  containerHijo2.className =
+    "containerPadre mb-4 col-12 col-sm-6 col-md-4 col-lg-4";
+
+  containerHijo2.append(containerNieto);
+
+  return containerHijo2;
 }
 
 // --> Funcion para solicitar datos de api y armar todas las cards.
@@ -63,7 +72,7 @@ function buildMovie(data) {
 function buildMovies() {
   const containerMovies = document.getElementById("recs");
 
-  $.get("https://webpt19b.web.app/data/movies.json", (data) => {
+  $.get("https://api.1rodemayo.com/movies", (data) => {
     data.forEach((movie) => {
       const renderMovie = buildMovie(movie);
       containerMovies.appendChild(renderMovie);
