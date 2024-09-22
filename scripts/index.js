@@ -1,6 +1,7 @@
 const quotes = require("./data/quotes");
 const buildMovie = require("./utils/buildMovie");
 const displayRandomQuote = require("./utils/randomQuote");
+const tempData = require("./data/tempData");
 
 document.addEventListener("DOMContentLoaded", function () {
   displayRandomQuote(quotes);
@@ -10,10 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function buildMovies() {
   const containerMovies = document.getElementById("recs");
 
-  $.get("https://api.1rodemayo.com/movies", (data) => {
-    data.forEach((movie) => {
-      const renderMovie = buildMovie(movie);
-      containerMovies.appendChild(renderMovie);
-    });
+  tempData.forEach((movie) => {
+    const renderMovie = buildMovie(movie);
+    containerMovies.appendChild(renderMovie);
   });
 }
